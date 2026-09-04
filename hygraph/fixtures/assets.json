@@ -1,0 +1,101 @@
+[
+  {
+    "id": "florianopolis-hero",
+    "fileName": "citycompass-florianopolis-hero.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "sourceUrl": "https://unsplash.com/photos/a-palm-tree-on-a-beach-next-to-the-ocean-KMn4VEeEhk8",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Sean Oulashin / Unsplash"
+  },
+  {
+    "id": "araucaria-hero",
+    "fileName": "citycompass-araucaria-hero.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b",
+    "sourceUrl": "https://unsplash.com/photos/green-trees-near-waterfalls-during-daytime-X5sz-WD8LJ0",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Pedro Lastra / Unsplash"
+  },
+  {
+    "id": "san-francisco-hero",
+    "fileName": "citycompass-san-francisco-hero.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1501594907352-04cda38ebc29",
+    "sourceUrl": "https://unsplash.com/photos/golden-gate-bridge-california-us-qX9Ie7ieb1E",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Rich Wood / Unsplash"
+  },
+  {
+    "id": "floripa-mercado",
+    "fileName": "citycompass-floripa-mercado.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
+    "sourceUrl": "https://unsplash.com/photos/meat-with-lettuce-on-white-ceramic-plate-zcUgjyqEwe8",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Joseph Gonzalez / Unsplash"
+  },
+  {
+    "id": "floripa-lagoa",
+    "fileName": "citycompass-floripa-lagoa.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1439066615861-d1af74d74000",
+    "sourceUrl": "https://unsplash.com/photos/body-of-water-near-trees-and-mountain-75715CESdJc",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Ken Cheung / Unsplash"
+  },
+  {
+    "id": "araucaria-praca",
+    "fileName": "citycompass-araucaria-praca.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1519331379826-f10be5486c6f",
+    "sourceUrl": "https://unsplash.com/photos/green-trees-on-park-R0y_bEUjiOM",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Jan Kahánek / Unsplash"
+  },
+  {
+    "id": "araucaria-cafe",
+    "fileName": "citycompass-araucaria-cafe.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
+    "sourceUrl": "https://unsplash.com/photos/white-ceramic-teacup-on-saucer-near-two-books-on-table-71vEirNScfI",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Mike Kenneally / Unsplash"
+  },
+  {
+    "id": "sf-ferry",
+    "fileName": "citycompass-sf-ferry.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1449034446853-66c86144b0ad",
+    "sourceUrl": "https://unsplash.com/photos/bridge-near-body-of-water-tCICLJ5ktBE",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Joseph Barrientos / Unsplash"
+  },
+  {
+    "id": "sf-crissy",
+    "fileName": "citycompass-sf-crissy.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+    "sourceUrl": "https://unsplash.com/photos/forest-heat-by-sunbeam-T5pL1uBGsTg",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Casey Horner / Unsplash"
+  },
+  {
+    "id": "floripa-draft",
+    "fileName": "citycompass-floripa-draft.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
+    "sourceUrl": "https://unsplash.com/photos/landscape-photography-of-mountain-hit-by-sun-rays-E616t6l4OD4",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "David Marcu / Unsplash"
+  },
+  {
+    "id": "floripa-scheduled",
+    "fileName": "citycompass-floripa-scheduled.jpg",
+    "uploadUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+    "sourceUrl": "https://unsplash.com/photos/cooked-dish-on-gray-bowl--G_dtn2lRPE",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "attribution": "Jay Wennington / Unsplash"
+  }
+]

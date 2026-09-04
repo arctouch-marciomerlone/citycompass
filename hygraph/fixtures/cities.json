@@ -1,0 +1,314 @@
+[
+  {
+    "slug": "florianopolis",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "location": { "latitude": -27.5954, "longitude": -48.548 },
+    "heroAssetId": "florianopolis-hero",
+    "featuredPlaceSlugs": ["floripa-mercado-publico"],
+    "name": {
+      "en_US": "Florianópolis",
+      "pt_BR": "Florianópolis",
+      "zh_CN": "弗洛里亚诺波利斯"
+    },
+    "intro": {
+      "en_US": "An island capital with markets, lagoons, and a walkable historic center.",
+      "pt_BR": "Uma capital insular com mercados, lagoas e um centro histórico para caminhar.",
+      "zh_CN": "一座海岛首府，有市场、泻湖和适合步行的历史中心。"
+    },
+    "seo": {
+      "title": {
+        "en_US": "Florianópolis city guide",
+        "pt_BR": "Guia de Florianópolis",
+        "zh_CN": "弗洛里亚诺波利斯城市指南"
+      },
+      "description": {
+        "en_US": "Editorial stops in Florianópolis, Santa Catarina.",
+        "pt_BR": "Paradas editoriais em Florianópolis, Santa Catarina.",
+        "zh_CN": "圣卡塔琳娜州弗洛里亚诺波利斯的编辑精选地点。"
+      }
+    },
+    "sections": {
+      "hero": {
+        "eyebrow": {
+          "en_US": "CityCompass",
+          "pt_BR": "CityCompass",
+          "zh_CN": "CityCompass"
+        },
+        "heading": {
+          "en_US": "See Florianópolis this week",
+          "pt_BR": "Veja Florianópolis nesta semana",
+          "zh_CN": "本周看看弗洛里亚诺波利斯"
+        },
+        "body": {
+          "en_US": "Start at the market, then walk toward the lagoon.",
+          "pt_BR": "Comece no mercado e siga a pé até a lagoa.",
+          "zh_CN": "从市场出发，再步行前往泻湖。"
+        },
+        "callToActionLabel": {
+          "en_US": "Browse places",
+          "pt_BR": "Ver lugares",
+          "zh_CN": "浏览地点"
+        }
+      },
+      "richText": {
+        "heading": {
+          "en_US": "How to use this guide",
+          "pt_BR": "Como usar este guia",
+          "zh_CN": "如何使用本指南"
+        },
+        "body": {
+          "en_US": "Every stop is editorial. Hours are omitted unless an editor wrote them for this project.",
+          "pt_BR": "Cada parada é editorial. Horários só aparecem se um editor os escreveu para este projeto.",
+          "zh_CN": "每个地点均为编辑撰写。除非编辑为本项目填写，否则不显示营业时间。"
+        }
+      },
+      "featured": {
+        "heading": {
+          "en_US": "Featured this week",
+          "pt_BR": "Destaques da semana",
+          "zh_CN": "本周精选"
+        }
+      },
+      "weather": {
+        "heading": {
+          "en_US": "Island weather",
+          "pt_BR": "Tempo na ilha",
+          "zh_CN": "海岛天气"
+        }
+      },
+      "map": {
+        "heading": {
+          "en_US": "Map of published places",
+          "pt_BR": "Mapa dos lugares publicados",
+          "zh_CN": "已发布地点地图"
+        }
+      },
+      "cta": {
+        "heading": {
+          "en_US": "Open the place list",
+          "pt_BR": "Abrir a lista de lugares",
+          "zh_CN": "打开地点列表"
+        },
+        "body": {
+          "en_US": "Filter by category or neighborhood.",
+          "pt_BR": "Filtre por categoria ou bairro.",
+          "zh_CN": "可按类别或街区筛选。"
+        },
+        "label": {
+          "en_US": "All places",
+          "pt_BR": "Todos os lugares",
+          "zh_CN": "全部地点"
+        }
+      }
+    }
+  },
+  {
+    "slug": "araucaria",
+    "country": "Brazil",
+    "timezone": "America/Sao_Paulo",
+    "location": { "latitude": -25.5925, "longitude": -49.4103 },
+    "heroAssetId": "araucaria-hero",
+    "featuredPlaceSlugs": ["araucaria-praca-central"],
+    "name": {
+      "en_US": "Araucária",
+      "pt_BR": "Araucária",
+      "zh_CN": "阿劳卡里亚"
+    },
+    "intro": {
+      "en_US": "A Paraná city with a compact center, plazas, and everyday cafes.",
+      "pt_BR": "Uma cidade do Paraná com centro compacto, praças e cafés do cotidiano.",
+      "zh_CN": "巴拉那州一座中心紧凑的城市，有广场和日常咖啡馆。"
+    },
+    "seo": {
+      "title": {
+        "en_US": "Araucária city guide",
+        "pt_BR": "Guia de Araucária",
+        "zh_CN": "阿劳卡里亚城市指南"
+      },
+      "description": {
+        "en_US": "Editorial stops in Araucária, Paraná.",
+        "pt_BR": "Paradas editoriais em Araucária, Paraná.",
+        "zh_CN": "巴拉那州阿劳卡里亚的编辑精选地点。"
+      }
+    },
+    "sections": {
+      "hero": {
+        "eyebrow": {
+          "en_US": "CityCompass",
+          "pt_BR": "CityCompass",
+          "zh_CN": "CityCompass"
+        },
+        "heading": {
+          "en_US": "A quieter Paraná stop",
+          "pt_BR": "Uma parada mais calma no Paraná",
+          "zh_CN": "巴拉那一处更安静的停留点"
+        },
+        "body": {
+          "en_US": "Walk the central plaza, then sit down for coffee.",
+          "pt_BR": "Caminhe pela praça central e depois sente-se para um café.",
+          "zh_CN": "先逛中心广场，再坐下来喝杯咖啡。"
+        },
+        "callToActionLabel": {
+          "en_US": "Browse places",
+          "pt_BR": "Ver lugares",
+          "zh_CN": "浏览地点"
+        }
+      },
+      "richText": {
+        "heading": {
+          "en_US": "How to use this guide",
+          "pt_BR": "Como usar este guia",
+          "zh_CN": "如何使用本指南"
+        },
+        "body": {
+          "en_US": "Coordinates come from Hygraph Map fields. This is not a Google Places import.",
+          "pt_BR": "As coordenadas vêm dos campos de mapa do Hygraph. Isto não é uma importação do Google Places.",
+          "zh_CN": "坐标来自 Hygraph 地图字段，不是从 Google Places 导入。"
+        }
+      },
+      "featured": {
+        "heading": {
+          "en_US": "Featured this week",
+          "pt_BR": "Destaques da semana",
+          "zh_CN": "本周精选"
+        }
+      },
+      "weather": {
+        "heading": {
+          "en_US": "Local weather",
+          "pt_BR": "Tempo local",
+          "zh_CN": "当地天气"
+        }
+      },
+      "map": {
+        "heading": {
+          "en_US": "Map of published places",
+          "pt_BR": "Mapa dos lugares publicados",
+          "zh_CN": "已发布地点地图"
+        }
+      },
+      "cta": {
+        "heading": {
+          "en_US": "Open the place list",
+          "pt_BR": "Abrir a lista de lugares",
+          "zh_CN": "打开地点列表"
+        },
+        "body": {
+          "en_US": "Filter by category or neighborhood.",
+          "pt_BR": "Filtre por categoria ou bairro.",
+          "zh_CN": "可按类别或街区筛选。"
+        },
+        "label": {
+          "en_US": "All places",
+          "pt_BR": "Todos os lugares",
+          "zh_CN": "全部地点"
+        }
+      }
+    }
+  },
+  {
+    "slug": "san-francisco",
+    "country": "United States",
+    "timezone": "America/Los_Angeles",
+    "location": { "latitude": 37.7749, "longitude": -122.4194 },
+    "heroAssetId": "san-francisco-hero",
+    "featuredPlaceSlugs": ["sf-ferry-building"],
+    "name": {
+      "en_US": "San Francisco",
+      "pt_BR": "São Francisco",
+      "zh_CN": "旧金山"
+    },
+    "intro": {
+      "en_US": "A bay city with a ferry hall, shoreline paths, and two walkable neighborhoods in this seed.",
+      "pt_BR": "Uma cidade da baía com um hall da balsa, caminhos na orla e dois bairros caminháveis neste seed.",
+      "zh_CN": "一座海湾城市。本批演示内容包括轮渡大厅、岸线步道和两个适合步行的街区。"
+    },
+    "seo": {
+      "title": {
+        "en_US": "San Francisco city guide",
+        "pt_BR": "Guia de São Francisco",
+        "zh_CN": "旧金山城市指南"
+      },
+      "description": {
+        "en_US": "Editorial stops in San Francisco, California.",
+        "pt_BR": "Paradas editoriais em São Francisco, Califórnia.",
+        "zh_CN": "加利福尼亚州旧金山的编辑精选地点。"
+      }
+    },
+    "sections": {
+      "hero": {
+        "eyebrow": {
+          "en_US": "CityCompass",
+          "pt_BR": "CityCompass",
+          "zh_CN": "CityCompass"
+        },
+        "heading": {
+          "en_US": "Bay light and shoreline walks",
+          "pt_BR": "Luz da baía e caminhadas na orla",
+          "zh_CN": "海湾光线与岸线步道"
+        },
+        "body": {
+          "en_US": "Start at the ferry hall, then follow the water toward Crissy Field.",
+          "pt_BR": "Comece no hall da balsa e siga a água até Crissy Field.",
+          "zh_CN": "从轮渡大厅出发，再沿海边走向 Crissy Field。"
+        },
+        "callToActionLabel": {
+          "en_US": "Browse places",
+          "pt_BR": "Ver lugares",
+          "zh_CN": "浏览地点"
+        }
+      },
+      "richText": {
+        "heading": {
+          "en_US": "How to use this guide",
+          "pt_BR": "Como usar este guia",
+          "zh_CN": "如何使用本指南"
+        },
+        "body": {
+          "en_US": "Directions use Hygraph coordinates. Google Place IDs stay empty until a human verifies them.",
+          "pt_BR": "As rotas usam coordenadas do Hygraph. IDs do Google Place ficam vazios até uma pessoa verificá-los.",
+          "zh_CN": "路线使用 Hygraph 坐标。在人工核验之前，Google Place ID 保持为空。"
+        }
+      },
+      "featured": {
+        "heading": {
+          "en_US": "Featured this week",
+          "pt_BR": "Destaques da semana",
+          "zh_CN": "本周精选"
+        }
+      },
+      "weather": {
+        "heading": {
+          "en_US": "Bay weather",
+          "pt_BR": "Tempo na baía",
+          "zh_CN": "海湾天气"
+        }
+      },
+      "map": {
+        "heading": {
+          "en_US": "Map of published places",
+          "pt_BR": "Mapa dos lugares publicados",
+          "zh_CN": "已发布地点地图"
+        }
+      },
+      "cta": {
+        "heading": {
+          "en_US": "Open the place list",
+          "pt_BR": "Abrir a lista de lugares",
+          "zh_CN": "打开地点列表"
+        },
+        "body": {
+          "en_US": "Filter by category or neighborhood.",
+          "pt_BR": "Filtre por categoria ou bairro.",
+          "zh_CN": "可按类别或街区筛选。"
+        },
+        "label": {
+          "en_US": "All places",
+          "pt_BR": "Todos os lugares",
+          "zh_CN": "全部地点"
+        }
+      }
+    }
+  }
+]

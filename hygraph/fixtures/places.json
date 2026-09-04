@@ -1,0 +1,227 @@
+[
+  {
+    "slug": "floripa-mercado-publico",
+    "citySlug": "florianopolis",
+    "neighborhoodSlug": "floripa-centro",
+    "categorySlugs": ["food-and-drink"],
+    "imageAssetIds": ["floripa-mercado"],
+    "address": "Praça XV de Novembro, Centro, Florianópolis, SC",
+    "location": { "latitude": -27.5969, "longitude": -48.5495 },
+    "priceBand": "BUDGET",
+    "isFeatured": true,
+    "lastVerified": "2026-09-01",
+    "publish": true,
+    "name": {
+      "en_US": "Public Market",
+      "pt_BR": "Mercado Público",
+      "zh_CN": "公共市场"
+    },
+    "summary": {
+      "en_US": "A downtown hall for produce, snacks, and morning traffic.",
+      "pt_BR": "Um hall no centro para verduras, lanches e movimento da manhã.",
+      "zh_CN": "市中心的厅堂，售卖农产品和小吃，早间人流多。"
+    },
+    "description": {
+      "en_US": "Use this stop as a first walk through Centro. Editorial copy only; no copied reviews or hours.",
+      "pt_BR": "Use esta parada como primeira caminhada pelo Centro. Texto editorial; sem avaliações ou horários copiados.",
+      "zh_CN": "把这里当作市中心的第一站。仅为编辑文案，不含转载评论或营业时间。"
+    }
+  },
+  {
+    "slug": "floripa-lagoa-path",
+    "citySlug": "florianopolis",
+    "neighborhoodSlug": "floripa-lagoa",
+    "categorySlugs": ["outdoors"],
+    "imageAssetIds": ["floripa-lagoa"],
+    "address": "Avenida das Rendeiras, Lagoa da Conceição, Florianópolis, SC",
+    "location": { "latitude": -27.6036, "longitude": -48.4603 },
+    "priceBand": "BUDGET",
+    "isFeatured": false,
+    "lastVerified": "2026-09-01",
+    "publish": true,
+    "name": {
+      "en_US": "Lagoa waterfront path",
+      "pt_BR": "Caminho da orla da Lagoa",
+      "zh_CN": "泻湖滨水步道"
+    },
+    "summary": {
+      "en_US": "An open path along the lagoon for a short walk.",
+      "pt_BR": "Um caminho aberto ao longo da lagoa para uma caminhada curta.",
+      "zh_CN": "沿泻湖的开放步道，适合短途步行。"
+    },
+    "description": {
+      "en_US": "A simple outdoor stop. Bring water. Coordinates are editorial Map values, not a geocoded import.",
+      "pt_BR": "Uma parada simples ao ar livre. Leve água. As coordenadas são valores editoriais de mapa, não uma importação geocodificada.",
+      "zh_CN": "一处简单的户外地点。请自备水。坐标为编辑在地图上标注的值，不是地理编码导入。"
+    }
+  },
+  {
+    "slug": "araucaria-praca-central",
+    "citySlug": "araucaria",
+    "neighborhoodSlug": "araucaria-centro",
+    "categorySlugs": ["outdoors", "culture"],
+    "imageAssetIds": ["araucaria-praca"],
+    "address": "Praça Rui Barbosa, Centro, Araucária, PR",
+    "location": { "latitude": -25.5931, "longitude": -49.4103 },
+    "priceBand": "BUDGET",
+    "isFeatured": true,
+    "lastVerified": "2026-09-01",
+    "publish": true,
+    "name": {
+      "en_US": "Central plaza",
+      "pt_BR": "Praça central",
+      "zh_CN": "中心广场"
+    },
+    "summary": {
+      "en_US": "A civic square used as the featured outdoor stop.",
+      "pt_BR": "Uma praça cívica usada como parada ao ar livre em destaque.",
+      "zh_CN": "作为精选户外地点的市政广场。"
+    },
+    "description": {
+      "en_US": "Sit, walk the paths, and use this as the map center check for Araucária.",
+      "pt_BR": "Sente-se, caminhe pelos caminhos e use este ponto para conferir o centro do mapa de Araucária.",
+      "zh_CN": "可以坐下或沿小路步行，并用来核对阿劳卡里亚的地图中心。"
+    }
+  },
+  {
+    "slug": "araucaria-cafe-centro",
+    "citySlug": "araucaria",
+    "neighborhoodSlug": "araucaria-centro",
+    "categorySlugs": ["food-and-drink"],
+    "imageAssetIds": ["araucaria-cafe"],
+    "address": "Rua Pedro Druszcz, Centro, Araucária, PR",
+    "location": { "latitude": -25.592, "longitude": -49.411 },
+    "priceBand": "MODERATE",
+    "isFeatured": false,
+    "lastVerified": "2026-09-01",
+    "publish": true,
+    "name": {
+      "en_US": "Center coffee room",
+      "pt_BR": "Sala de café do centro",
+      "zh_CN": "中心咖啡馆"
+    },
+    "summary": {
+      "en_US": "A small editorial cafe stop near the plaza.",
+      "pt_BR": "Uma pequena parada de café editorial perto da praça.",
+      "zh_CN": "广场附近的一处编辑咖啡馆。"
+    },
+    "description": {
+      "en_US": "An invented seed cafe for the food filter. No opening hours were written for this project.",
+      "pt_BR": "Um café inventado para o filtro de comida. Não há horário escrito para este projeto.",
+      "zh_CN": "用于餐饮筛选的演示咖啡馆。本项目未填写营业时间。"
+    }
+  },
+  {
+    "slug": "sf-ferry-building",
+    "citySlug": "san-francisco",
+    "neighborhoodSlug": "sf-north-beach",
+    "categorySlugs": ["food-and-drink", "culture"],
+    "imageAssetIds": ["sf-ferry"],
+    "address": "1 Ferry Building, San Francisco, CA",
+    "location": { "latitude": 37.7955, "longitude": -122.3937 },
+    "priceBand": "MODERATE",
+    "isFeatured": true,
+    "lastVerified": "2026-09-01",
+    "publish": true,
+    "name": {
+      "en_US": "Ferry Building",
+      "pt_BR": "Ferry Building",
+      "zh_CN": "轮渡大楼"
+    },
+    "summary": {
+      "en_US": "A waterfront hall used as the featured city stop.",
+      "pt_BR": "Um hall na orla usado como parada em destaque da cidade.",
+      "zh_CN": "作为城市精选地点的滨水大厅。"
+    },
+    "description": {
+      "en_US": "Walk the nave, then continue along the Embarcadero. This copy is editorial and does not quote Google listings.",
+      "pt_BR": "Caminhe pela nave e siga pelo Embarcadero. Este texto é editorial e não cita listagens do Google.",
+      "zh_CN": "走过大厅，再沿 Embarcadero 继续走。本文为编辑撰写，不引用 Google 列表。"
+    }
+  },
+  {
+    "slug": "sf-crissy-field",
+    "citySlug": "san-francisco",
+    "neighborhoodSlug": "sf-north-beach",
+    "categorySlugs": ["outdoors"],
+    "imageAssetIds": ["sf-crissy"],
+    "address": "Crissy Field, San Francisco, CA",
+    "location": { "latitude": 37.8024, "longitude": -122.4662 },
+    "priceBand": "BUDGET",
+    "isFeatured": false,
+    "lastVerified": "2026-09-01",
+    "publish": true,
+    "name": {
+      "en_US": "Crissy Field",
+      "pt_BR": "Crissy Field",
+      "zh_CN": "克里西田园"
+    },
+    "summary": {
+      "en_US": "A shoreline meadow and path toward the Golden Gate.",
+      "pt_BR": "Um campo na orla e um caminho em direção ao Golden Gate.",
+      "zh_CN": "沿海草地和通往金门大桥方向的步道。"
+    },
+    "description": {
+      "en_US": "An open outdoor stop. Wind is common. Marker coordinates are public well-known values.",
+      "pt_BR": "Uma parada aberta ao ar livre. Vento é comum. As coordenadas do marcador são valores públicos conhecidos.",
+      "zh_CN": "开放的户外地点，风较大。标记坐标为公开的常见值。"
+    }
+  },
+  {
+    "slug": "floripa-mirante-rascunho",
+    "citySlug": "florianopolis",
+    "neighborhoodSlug": "floripa-centro",
+    "categorySlugs": ["outdoors"],
+    "imageAssetIds": ["floripa-draft"],
+    "address": "Morro da Cruz, Florianópolis, SC",
+    "location": { "latitude": -27.5717, "longitude": -48.4236 },
+    "priceBand": "BUDGET",
+    "isFeatured": false,
+    "lastVerified": "2026-09-01",
+    "publish": false,
+    "name": {
+      "en_US": "Hill lookout (draft)",
+      "pt_BR": "Mirante do morro (rascunho)",
+      "zh_CN": "山丘观景台（草稿）"
+    },
+    "summary": {
+      "en_US": "A draft lookout kept off the Published stage.",
+      "pt_BR": "Um mirante em rascunho, fora do estágio Published.",
+      "zh_CN": "未进入 Published 阶段的草稿观景台。"
+    },
+    "description": {
+      "en_US": "Seed draft record. Do not publish this slug.",
+      "pt_BR": "Registro rascunho do seed. Não publique este slug.",
+      "zh_CN": "种子草稿记录。不要发布此 slug。"
+    }
+  },
+  {
+    "slug": "floripa-cafe-agendado",
+    "citySlug": "florianopolis",
+    "neighborhoodSlug": "floripa-centro",
+    "categorySlugs": ["food-and-drink"],
+    "imageAssetIds": ["floripa-scheduled"],
+    "address": "Rua Felipe Schmidt, Centro, Florianópolis, SC",
+    "location": { "latitude": -27.595, "longitude": -48.55 },
+    "priceBand": "MODERATE",
+    "isFeatured": false,
+    "lastVerified": "2026-09-01",
+    "publish": false,
+    "schedule": true,
+    "name": {
+      "en_US": "Scheduled corner cafe",
+      "pt_BR": "Café da esquina agendado",
+      "zh_CN": "已安排发布的街角咖啡馆"
+    },
+    "summary": {
+      "en_US": "A draft cafe used to try schedulePublishPlace.",
+      "pt_BR": "Um café em rascunho usado para testar schedulePublishPlace.",
+      "zh_CN": "用于尝试 schedulePublishPlace 的草稿咖啡馆。"
+    },
+    "description": {
+      "en_US": "Created as draft, then scheduled if the project plan allows it.",
+      "pt_BR": "Criado como rascunho e agendado se o plano do projeto permitir.",
+      "zh_CN": "先创建为草稿；若项目套餐允许，再安排发布。"
+    }
+  }
+]

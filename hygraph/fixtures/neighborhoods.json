@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "floripa-centro",
+    "citySlug": "florianopolis",
+    "location": { "latitude": -27.5969, "longitude": -48.5495 },
+    "name": {
+      "en_US": "Centro",
+      "pt_BR": "Centro",
+      "zh_CN": "市中心"
+    },
+    "description": {
+      "en_US": "The historic downtown around the public market.",
+      "pt_BR": "O centro histórico em volta do mercado público.",
+      "zh_CN": "公共市场周围的历史市中心。"
+    }
+  },
+  {
+    "slug": "floripa-lagoa",
+    "citySlug": "florianopolis",
+    "location": { "latitude": -27.6036, "longitude": -48.4603 },
+    "name": {
+      "en_US": "Lagoa da Conceição",
+      "pt_BR": "Lagoa da Conceição",
+      "zh_CN": "Conceição 泻湖"
+    },
+    "description": {
+      "en_US": "A lagoon neighborhood with paths along the water.",
+      "pt_BR": "Um bairro da lagoa com caminhos à beira d'água.",
+      "zh_CN": "沿湖步道所在的泻湖街区。"
+    }
+  },
+  {
+    "slug": "araucaria-centro",
+    "citySlug": "araucaria",
+    "location": { "latitude": -25.5931, "longitude": -49.4103 },
+    "name": {
+      "en_US": "Centro",
+      "pt_BR": "Centro",
+      "zh_CN": "市中心"
+    },
+    "description": {
+      "en_US": "The compact civic center and plaza.",
+      "pt_BR": "O centro cívico compacto e a praça.",
+      "zh_CN": "紧凑的市政中心和广场。"
+    }
+  },
+  {
+    "slug": "araucaria-thomaz-coelho",
+    "citySlug": "araucaria",
+    "location": { "latitude": -25.585, "longitude": -49.395 },
+    "name": {
+      "en_US": "Thomaz Coelho",
+      "pt_BR": "Thomaz Coelho",
+      "zh_CN": "Thomaz Coelho"
+    },
+    "description": {
+      "en_US": "A residential district east of the center.",
+      "pt_BR": "Um distrito residencial a leste do centro.",
+      "zh_CN": "市中心以东的居住区。"
+    }
+  },
+  {
+    "slug": "sf-mission",
+    "citySlug": "san-francisco",
+    "location": { "latitude": 37.7599, "longitude": -122.4148 },
+    "name": {
+      "en_US": "Mission",
+      "pt_BR": "Mission",
+      "zh_CN": "教会区"
+    },
+    "description": {
+      "en_US": "A south-of-Market neighborhood used here as a filter demo.",
+      "pt_BR": "Um bairro ao sul de Market, usado aqui como demo de filtro.",
+      "zh_CN": "Market 以南的街区，用作筛选演示。"
+    }
+  },
+  {
+    "slug": "sf-north-beach",
+    "citySlug": "san-francisco",
+    "location": { "latitude": 37.8061, "longitude": -122.4103 },
+    "name": {
+      "en_US": "North Beach",
+      "pt_BR": "North Beach",
+      "zh_CN": "北海滩"
+    },
+    "description": {
+      "en_US": "A north-end neighborhood near the bay approaches.",
+      "pt_BR": "Um bairro no extremo norte, perto das aproximações da baía.",
+      "zh_CN": "靠近海湾入口的北端街区。"
+    }
+  }
+]

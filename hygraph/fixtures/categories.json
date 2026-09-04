@@ -1,0 +1,47 @@
+[
+  {
+    "slug": "food-and-drink",
+    "iconKey": "FOOD_AND_DRINK",
+    "sortOrder": 1,
+    "name": {
+      "en_US": "Food and drink",
+      "pt_BR": "Comida e bebida",
+      "zh_CN": "餐饮"
+    },
+    "description": {
+      "en_US": "Markets, cafes, and everyday places to eat.",
+      "pt_BR": "Mercados, cafés e lugares do dia a dia para comer.",
+      "zh_CN": "市场、咖啡馆和日常用餐地点。"
+    }
+  },
+  {
+    "slug": "culture",
+    "iconKey": "CULTURE",
+    "sortOrder": 2,
+    "name": {
+      "en_US": "Culture",
+      "pt_BR": "Cultura",
+      "zh_CN": "文化"
+    },
+    "description": {
+      "en_US": "Museums, halls, and local cultural stops.",
+      "pt_BR": "Museus, salas e paradas culturais locais.",
+      "zh_CN": "博物馆、展厅和本地文化地点。"
+    }
+  },
+  {
+    "slug": "outdoors",
+    "iconKey": "OUTDOORS",
+    "sortOrder": 3,
+    "name": {
+      "en_US": "Outdoors",
+      "pt_BR": "Ar livre",
+      "zh_CN": "户外"
+    },
+    "description": {
+      "en_US": "Parks, waterfronts, and open-air walks.",
+      "pt_BR": "Parques, orlas e caminhadas ao ar livre.",
+      "zh_CN": "公园、滨水区和户外步道。"
+    }
+  }
+]
