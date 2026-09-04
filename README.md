@@ -2,6 +2,8 @@
 
 Localized city guide. Editorial content and coordinates come from Hygraph. Weather comes from Open-Meteo through a Hygraph Remote Source.
 
+Demo: [https://citycompass-livid.vercel.app/](https://citycompass-livid.vercel.app/)
+
 Product requirements: `PRD.md`. Implementation plan: `PLAN.md`.
 
 ## Features
