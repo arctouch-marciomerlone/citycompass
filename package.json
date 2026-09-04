@@ -1,0 +1,44 @@
+{
+  "name": "citycompass",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --experimental-strip-types --experimental-detect-module --import ./scripts/test/register-alias.mjs --test scripts/test/*.test.ts",
+    "hygraph:backup": "node --experimental-strip-types --experimental-detect-module --env-file=.env.local scripts/hygraph/backup.ts",
+    "hygraph:reset": "node --experimental-strip-types --experimental-detect-module --env-file=.env.local scripts/hygraph/reset.ts",
+    "hygraph:seed": "node --experimental-strip-types --experimental-detect-module --env-file=.env.local scripts/hygraph/seed.ts",
+    "hygraph:update-weather-remote": "node --experimental-strip-types --experimental-detect-module --env-file=.env.local scripts/hygraph/update-weather-remote.ts"
+  },
+  "dependencies": {
+    "@hygraph/management-sdk": "^1.6.1",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "eslint-config-prettier": "^10",
+    "prettier": "^3",
+    "prettier-plugin-tailwindcss": "^0.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "typescript-eslint": "^8"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "packageManager": "pnpm@11.17.0"
+}
