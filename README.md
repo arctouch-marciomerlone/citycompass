@@ -127,7 +127,7 @@ Open-Meteo’s forecast API does not require a key. The Remote Source base URL i
 
 ## Environment variables
 
-Copy from `.env.example`. Names may change during implementation; public vs server-only separation must not.
+Copy from `.env.example`. Names may change during implementation; public vs server-only separation must not. Script-only and unused keys are marked in `.env.example`.
 
 ### Hygraph (server only)
 
@@ -135,17 +135,17 @@ Copy from `.env.example`. Names may change during implementation; public vs serv
 | ---------------------------- | --------------------------------------------------------------------------------------------- |
 | `HYGRAPH_CONTENT_API_URL`    | GraphQL Content API endpoint used by the app, seed scripts, and Management SDK `endpoint`     |
 | `HYGRAPH_READ_TOKEN`         | Published-stage reads for the public site                                                     |
-| `HYGRAPH_PREVIEW_TOKEN`      | Draft-stage reads for preview. Never used on public requests                                  |
-| `HYGRAPH_MANAGEMENT_API_URL` | Regional Management API GraphQL URL for Schema as Code and SDK `managementEndpoint`           |
-| `HYGRAPH_MANAGEMENT_TOKEN`   | Schema and content mutation scripts only (`pnpm hygraph:*`)                                   |
+| `HYGRAPH_PREVIEW_TOKEN`      | Reserved. Not read. Draft preview is skipped. Never use on public requests.                   |
+| `HYGRAPH_MANAGEMENT_API_URL` | Script-only. Regional Management API GraphQL URL for Schema as Code and SDK `managementEndpoint`. Not read by the Next.js app. |
+| `HYGRAPH_MANAGEMENT_TOKEN`   | Script-only. Schema and content mutation scripts (`pnpm hygraph:*`). Not read by the Next.js app. |
 | `HYGRAPH_WEBHOOK_SECRET`     | Shared secret for authenticating Hygraph webhook calls. Not needed until the live HTTPS test. |
 
 ### App config (server)
 
-| Variable            | Purpose                                              |
-| ------------------- | ---------------------------------------------------- |
-| `DEFAULT_LOCALE`    | Fallback locale. Default `en_US`                     |
-| `SUPPORTED_LOCALES` | Comma-separated locales. Default `en_US,pt_BR,zh_CN` |
+| Variable            | Purpose                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------ |
+| `DEFAULT_LOCALE`    | Not read. Fallback is `en_US` in `lib/locale.ts`.                                                |
+| `SUPPORTED_LOCALES` | Not read. Locales are `en_US`, `pt_BR`, `zh_CN` in `lib/locale.ts`.                              |
 
 ### Public (browser)
 

@@ -38,6 +38,7 @@ export function assertNodeVersion(): void {
   }
 }
 
+/** Script-only. Reads `HYGRAPH_CONTENT_API_URL`, `HYGRAPH_MANAGEMENT_API_URL`, `HYGRAPH_MANAGEMENT_TOKEN`. Not used by the Next.js app. */
 export function readHygraphManagementEnv(): HygraphManagementEnv {
   return {
     contentApiUrl: readRequired("HYGRAPH_CONTENT_API_URL"),

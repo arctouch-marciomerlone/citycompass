@@ -1,5 +1,13 @@
-import { DEFAULT_LOCALE, isLocale, type Locale } from "@/lib/locale";
-
+/**
+ * Next.js runtime env. Reads:
+ * `HYGRAPH_CONTENT_API_URL`, `HYGRAPH_READ_TOKEN`, `HYGRAPH_WEBHOOK_SECRET`,
+ * `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`,
+ * `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID`.
+ *
+ * Script-only (not read here): `HYGRAPH_MANAGEMENT_API_URL`,
+ * `HYGRAPH_MANAGEMENT_TOKEN`. Unused: `HYGRAPH_PREVIEW_TOKEN`,
+ * `DEFAULT_LOCALE`, `SUPPORTED_LOCALES` (locales live in `lib/locale.ts`).
+ */
 const DEFAULT_SITE_URL = "http://localhost:3000";
 const GRAPHQL_TIMEOUT_MS = 8_000;
 const WEATHER_TIMEOUT_MS = 6_000;
@@ -72,12 +80,4 @@ export function weatherRevalidateSeconds(): number {
 
 export function contentRevalidateSeconds(): number {
   return CONTENT_REVALIDATE_SECONDS;
-}
-
-export function localeFromEnvDefault(): Locale {
-  const value = readTrimmed("DEFAULT_LOCALE");
-  if (value !== undefined && isLocale(value)) {
-    return value;
-  }
-  return DEFAULT_LOCALE;
 }
