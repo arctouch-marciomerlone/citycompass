@@ -51,3 +51,7 @@ export function placePath(
 export function mapPath(locale: Locale, citySlug: string): Route {
   return requireRoute(`/${locale}/${citySlug}/map`);
 }
+
+export function aboutPath(locale: Locale): Route {
+  return requireRoute(`/${locale}/about`);
+}

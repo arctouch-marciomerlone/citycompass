@@ -12,13 +12,13 @@ export function CitySwitcher({
 }: {
   readonly locale: Locale;
   readonly cities: readonly CitySummary[];
-  readonly activeSlug: string;
+  readonly activeSlug?: string;
   readonly label: string;
 }) {
   return (
     <nav aria-label={label} className="flex flex-wrap gap-2 text-sm">
       {cities.map((city) => {
-        const active = city.slug === activeSlug;
+        const active = activeSlug !== undefined && city.slug === activeSlug;
         return (
           <Link
             key={city.slug}

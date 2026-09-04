@@ -24,6 +24,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: 1,
     });
+    entries.push({
+      url: `${origin}/${locale}/about`,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    });
     for (const citySlug of citySlugs) {
       entries.push({
         url: `${origin}/${locale}/${citySlug}`,

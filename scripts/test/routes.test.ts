@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  aboutPath,
   homePath,
   localeHomePath,
   mapPath,
@@ -22,4 +23,5 @@ test("city routes include locale and city slug", () => {
     "/zh_CN/san-francisco/places/sf-ferry-building",
   );
   assert.equal(mapPath("en_US", "florianopolis"), "/en_US/florianopolis/map");
+  assert.equal(aboutPath("en_US"), "/en_US/about");
 });
