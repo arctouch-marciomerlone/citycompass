@@ -4,11 +4,11 @@ Localized city guide. Editorial content and coordinates come from Hygraph. Weath
 
 Product requirements: `PRD.md`. Implementation plan: `PLAN.md`.
 
-# Features
+## Features
 
 CityCompass is a Hygraph certification project. Hygraph holds the schema, fixtures, locales, stages, assets, relations, and Map coordinates. The Next.js app queries the Published Content API. Weather is not stored as CMS content; it is federated onto `City.weather` through a REST Remote Source.
 
-## Hygraph platform features used
+### Hygraph platform features used
 
 - **Schema as Code / Management API** — `pnpm hygraph:backup`, `hygraph:reset`, `hygraph:seed`, and `hygraph:update-weather-remote` apply models, components, locales, Remote Sources, and fixtures from this repository. Studio is not used to create schema or entries.
 - **Content models and references** — `City`, `Place`, `Category`, `Neighborhood`. Place belongs to a City, at least one Category, and an optional Neighborhood.
@@ -23,17 +23,17 @@ CityCompass is a Hygraph certification project. Hygraph holds the schema, fixtur
 - **GraphQL Content API and Permanent Auth Tokens** — High Performance Content API for public reads. Separate tokens for Published read, Draft preview, and Management scripts.
 - **Webhooks** — handler implemented; Studio webhook not registered (see below).
 
-## Webhook (implemented, not connected)
+### Webhook (implemented, not connected)
 
 Hygraph webhooks notify the frontend when content is published or unpublished so Next.js can revalidate cache tags. The demo includes `POST /api/revalidate`: it verifies `gcms-signature` with `HYGRAPH_WEBHOOK_SECRET` and maps `__typename` to allowlisted tags (`city`, `place`, `category`, `neighborhood`, `map`). Callers cannot pass arbitrary paths.
 
 The Studio webhook is **not set** in this demo. The route exists to show the platform contract. Hygraph Cloud cannot call `localhost` and requires a public `https://` URL. Leave the webhook paused until that URL exists. See `docs/webhook-revalidation.md`.
 
-## Google Maps (out of scope)
+### Google Maps (out of scope)
 
 The Google Maps JavaScript API is not integrated. This certification demo does not load Maps JS, Places, or Geocoding. Coordinates stay in Hygraph Map fields. The map route uses a placeholder and the place list. Directions URLs can still be built from those coordinates (or an optional editorial `googlePlaceId`) without embedding Google Maps.
 
-## Post-MVP: more of the Hygraph platform
+### Post-MVP: more of the Hygraph platform
 
 Not required for this demo. Each item uses a Hygraph capability that the MVP only touches or skips.
 
@@ -71,11 +71,11 @@ Recommended editor extensions are listed in `.vscode/extensions.json`.
 1. Open the project in [Hygraph Studio](https://app.hygraph.com/).
 2. Copy endpoints from **Project Settings → Access → Endpoints**. See [API access](https://hygraph.com/docs/getting-started/access-and-permissions/api-access) and [Authorization](https://hygraph.com/docs/api-reference/basics/authorization#high-performance-endpoint).
 
-| Studio label | Env var | Example shape | Who uses it |
-| --- | --- | --- | --- |
-| High Performance Content API | `HYGRAPH_CONTENT_API_URL` | `https://<region>.cdn.hygraph.com/content/<projectId>/<environment>` | Next.js app and `pnpm hygraph:*` |
-| Regular Content API (if shown) | `HYGRAPH_CONTENT_API_URL` (legacy) | `https://<region>.hygraph.com/v2/<projectId>/<environment>` | Same as above if you are not on the CDN URL |
-| Management API | `HYGRAPH_MANAGEMENT_API_URL` | `https://management-<region>.hygraph.com/graphql` | `pnpm hygraph:*` only. Never the Next.js app. Never Vercel. |
+| Studio label                   | Env var                            | Example shape                                                        | Who uses it                                                 |
+| ------------------------------ | ---------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------- |
+| High Performance Content API   | `HYGRAPH_CONTENT_API_URL`          | `https://<region>.cdn.hygraph.com/content/<projectId>/<environment>` | Next.js app and `pnpm hygraph:*`                            |
+| Regular Content API (if shown) | `HYGRAPH_CONTENT_API_URL` (legacy) | `https://<region>.hygraph.com/v2/<projectId>/<environment>`          | Same as above if you are not on the CDN URL                 |
+| Management API                 | `HYGRAPH_MANAGEMENT_API_URL`       | `https://management-<region>.hygraph.com/graphql`                    | `pnpm hygraph:*` only. Never the Next.js app. Never Vercel. |
 
 The Next.js app POSTs GraphQL to `HYGRAPH_CONTENT_API_URL`. That value must be the Content API, usually the High Performance URL with `/content/`. The Management URL ends in `/graphql` and has a different schema (no `cities` field; `Locale` is not an input enum).
 
@@ -97,14 +97,14 @@ The app does not read `HYGRAPH_MANAGEMENT_*`. Do not add those on Vercel.
 
 Set these in the Vercel project (Production), then redeploy:
 
-| Variable | Required | Value |
-| --- | --- | --- |
-| `HYGRAPH_CONTENT_API_URL` | Yes | High Performance Content API from Studio. Shape: `https://<region>.cdn.hygraph.com/content/<projectId>/<environment>`. Example: `https://us-west-2.cdn.hygraph.com/content/<projectId>/master`. |
-| `HYGRAPH_READ_TOKEN` | Yes | Permanent Auth Token with Published Content API read. |
-| `NEXT_PUBLIC_SITE_URL` | Yes | The Vercel origin, `https://<project>.vercel.app` (or the custom domain). |
-| `HYGRAPH_WEBHOOK_SECRET` | No | Only when a Studio webhook points at this deployment. |
-| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | No | Leave empty for this demo. |
-| `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID` | No | Leave empty for this demo. |
+| Variable                          | Required | Value                                                                                                                                                                                           |
+| --------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `HYGRAPH_CONTENT_API_URL`         | Yes      | High Performance Content API from Studio. Shape: `https://<region>.cdn.hygraph.com/content/<projectId>/<environment>`. Example: `https://us-west-2.cdn.hygraph.com/content/<projectId>/master`. |
+| `HYGRAPH_READ_TOKEN`              | Yes      | Permanent Auth Token with Published Content API read.                                                                                                                                           |
+| `NEXT_PUBLIC_SITE_URL`            | Yes      | The Vercel origin, `https://<project>.vercel.app` (or the custom domain).                                                                                                                       |
+| `HYGRAPH_WEBHOOK_SECRET`          | No       | Only when a Studio webhook points at this deployment.                                                                                                                                           |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | No       | Leave empty for this demo.                                                                                                                                                                      |
+| `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID`  | No       | Leave empty for this demo.                                                                                                                                                                      |
 
 If `HYGRAPH_CONTENT_API_URL` is `https://management-<region>.hygraph.com/graphql`, the app queries the Management schema and fails with `Cannot query field "cities"` and `Variable "$locales" cannot be non-input type "[Locale!]!"`.
 
@@ -157,21 +157,21 @@ Copy from `.env.example`. Names may change during implementation; public vs serv
 
 ### Hygraph (server only)
 
-| Variable                     | Purpose                                                                                       |
-| ---------------------------- | --------------------------------------------------------------------------------------------- |
-| `HYGRAPH_CONTENT_API_URL`    | High Performance Content API (`/content/…`). Used by the app and seed scripts. Not the Management `/graphql` URL. |
-| `HYGRAPH_READ_TOKEN`         | Published-stage reads for the public site                                                     |
-| `HYGRAPH_PREVIEW_TOKEN`      | Reserved. Not read. Draft preview is skipped. Never use on public requests.                   |
+| Variable                     | Purpose                                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `HYGRAPH_CONTENT_API_URL`    | High Performance Content API (`/content/…`). Used by the app and seed scripts. Not the Management `/graphql` URL.              |
+| `HYGRAPH_READ_TOKEN`         | Published-stage reads for the public site                                                                                      |
+| `HYGRAPH_PREVIEW_TOKEN`      | Reserved. Not read. Draft preview is skipped. Never use on public requests.                                                    |
 | `HYGRAPH_MANAGEMENT_API_URL` | Script-only. Regional Management API GraphQL URL for Schema as Code and SDK `managementEndpoint`. Not read by the Next.js app. |
-| `HYGRAPH_MANAGEMENT_TOKEN`   | Script-only. Schema and content mutation scripts (`pnpm hygraph:*`). Not read by the Next.js app. |
-| `HYGRAPH_WEBHOOK_SECRET`     | Shared secret for authenticating Hygraph webhook calls. Not needed until the live HTTPS test. |
+| `HYGRAPH_MANAGEMENT_TOKEN`   | Script-only. Schema and content mutation scripts (`pnpm hygraph:*`). Not read by the Next.js app.                              |
+| `HYGRAPH_WEBHOOK_SECRET`     | Shared secret for authenticating Hygraph webhook calls. Not needed until the live HTTPS test.                                  |
 
 ### App config (server)
 
-| Variable            | Purpose                                                                                          |
-| ------------------- | ------------------------------------------------------------------------------------------------ |
-| `DEFAULT_LOCALE`    | Not read. Fallback is `en_US` in `lib/locale.ts`.                                                |
-| `SUPPORTED_LOCALES` | Not read. Locales are `en_US`, `pt_BR`, `zh_CN` in `lib/locale.ts`.                              |
+| Variable            | Purpose                                                             |
+| ------------------- | ------------------------------------------------------------------- |
+| `DEFAULT_LOCALE`    | Not read. Fallback is `en_US` in `lib/locale.ts`.                   |
+| `SUPPORTED_LOCALES` | Not read. Locales are `en_US`, `pt_BR`, `zh_CN` in `lib/locale.ts`. |
 
 ### Public (browser)
 
@@ -183,15 +183,15 @@ Copy from `.env.example`. Names may change during implementation; public vs serv
 
 ## Scripts
 
-| Command                              | Purpose                                                                                                    |
-| ------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| `pnpm dev`                           | Next.js dev server                                                                                         |
-| `pnpm build`                         | Production build                                                                                           |
-| `pnpm start`                         | Serve the production build                                                                                 |
-| `pnpm lint`                          | ESLint with zero warnings                                                                                  |
-| `pnpm typecheck`                     | Generate Next.js types, then `tsc --noEmit`                                                                |
-| `pnpm format`                        | Prettier write                                                                                             |
-| `pnpm format:check`                  | Prettier check                                                                                             |
-| `pnpm hygraph:backup`                | Export live schema JSON to `hygraph/backups/` (gitignored). Content export is skipped.                     |
+| Command                              | Purpose                                                                                                 |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `pnpm dev`                           | Next.js dev server                                                                                      |
+| `pnpm build`                         | Production build                                                                                        |
+| `pnpm start`                         | Serve the production build                                                                              |
+| `pnpm lint`                          | ESLint with zero warnings                                                                               |
+| `pnpm typecheck`                     | Generate Next.js types, then `tsc --noEmit`                                                             |
+| `pnpm format`                        | Prettier write                                                                                          |
+| `pnpm format:check`                  | Prettier check                                                                                          |
+| `pnpm hygraph:backup`                | Export live schema JSON to `hygraph/backups/` (gitignored). Content export is skipped.                  |
 | `pnpm hygraph:reset`                 | Backup, fail closed if the project is not clean, apply `hygraph/schema/`. Requires Node 24 (`nvm use`). |
-| `pnpm hygraph:update-weather-remote` | Backup, then patch `City.weather` Path and input args on a live schema.                                    |
+| `pnpm hygraph:update-weather-remote` | Backup, then patch `City.weather` Path and input args on a live schema.                                 |
