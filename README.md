@@ -69,9 +69,16 @@ Recommended editor extensions are listed in `.vscode/extensions.json`.
 ### Hygraph
 
 1. Open the project in [Hygraph Studio](https://app.hygraph.com/).
-2. Copy endpoints from **Project Settings → Access → Endpoints**. See [API access](https://hygraph.com/docs/getting-started/access-and-permissions/api-access).
-   - High Performance Content API → `HYGRAPH_CONTENT_API_URL`
-   - Management API → `HYGRAPH_MANAGEMENT_API_URL` (regional, for example `https://management-<region>.hygraph.com/graphql`)
+2. Copy endpoints from **Project Settings → Access → Endpoints**. See [API access](https://hygraph.com/docs/getting-started/access-and-permissions/api-access) and [Authorization](https://hygraph.com/docs/api-reference/basics/authorization#high-performance-endpoint).
+
+| Studio label | Env var | Example shape | Who uses it |
+| --- | --- | --- | --- |
+| High Performance Content API | `HYGRAPH_CONTENT_API_URL` | `https://<region>.cdn.hygraph.com/content/<projectId>/<environment>` | Next.js app and `pnpm hygraph:*` |
+| Regular Content API (if shown) | `HYGRAPH_CONTENT_API_URL` (legacy) | `https://<region>.hygraph.com/v2/<projectId>/<environment>` | Same as above if you are not on the CDN URL |
+| Management API | `HYGRAPH_MANAGEMENT_API_URL` | `https://management-<region>.hygraph.com/graphql` | `pnpm hygraph:*` only. Never the Next.js app. Never Vercel. |
+
+The Next.js app POSTs GraphQL to `HYGRAPH_CONTENT_API_URL`. That value must be the Content API, usually the High Performance URL with `/content/`. The Management URL ends in `/graphql` and has a different schema (no `cities` field; `Locale` is not an input enum).
+
 3. Create Permanent Auth Tokens under **Project Settings → Access → Permanent Auth Tokens**. A new token has no permissions until you add them. See [Permanent Auth Tokens](https://hygraph.com/docs/api-reference/basics/authorization).
 
 Create three tokens:
@@ -83,6 +90,25 @@ Create three tokens:
 | `HYGRAPH_MANAGEMENT_TOKEN` | n/a           | Management API permissions required by `pnpm hygraph:*` scripts. Must include `ENVIRONMENT_READ`. See `docs/hygraph-setup.md`. |
 
 Do not put Hygraph tokens on `NEXT_PUBLIC_` variables. Do not use the management token for public or preview queries.
+
+### Vercel
+
+The app does not read `HYGRAPH_MANAGEMENT_*`. Do not add those on Vercel.
+
+Set these in the Vercel project (Production), then redeploy:
+
+| Variable | Required | Value |
+| --- | --- | --- |
+| `HYGRAPH_CONTENT_API_URL` | Yes | High Performance Content API from Studio. Shape: `https://<region>.cdn.hygraph.com/content/<projectId>/<environment>`. Example: `https://us-west-2.cdn.hygraph.com/content/<projectId>/master`. |
+| `HYGRAPH_READ_TOKEN` | Yes | Permanent Auth Token with Published Content API read. |
+| `NEXT_PUBLIC_SITE_URL` | Yes | The Vercel origin, `https://<project>.vercel.app` (or the custom domain). |
+| `HYGRAPH_WEBHOOK_SECRET` | No | Only when a Studio webhook points at this deployment. |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | No | Leave empty for this demo. |
+| `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID` | No | Leave empty for this demo. |
+
+If `HYGRAPH_CONTENT_API_URL` is `https://management-<region>.hygraph.com/graphql`, the app queries the Management schema and fails with `Cannot query field "cities"` and `Variable "$locales" cannot be non-input type "[Locale!]!"`.
+
+Paste values only. Do not wrap them in quotes or backticks. `.env.local` strips quotes; the Vercel dashboard does not. A quoted `HYGRAPH_CONTENT_API_URL` makes `fetch` fail with `unknown scheme`. `NEXT_PUBLIC_SITE_URL` on Vercel must be the deployed `https://` origin, not `http://localhost:3000`.
 
 4. Webhook Studio setup is **TBD until Story 2 is implemented and the live HTTPS test runs last**. Do not block Story 1 or frontend implementation on a public URL. When the URL exists, create a webhook under **Project Settings → Automation → Webhooks**. See [Configure webhooks](https://hygraph.com/docs/developer-guides/webhooks/webhooks-overview) and [Webhooks](https://hygraph.com/docs/api-reference/basics/webhooks). Use:
 
@@ -133,7 +159,7 @@ Copy from `.env.example`. Names may change during implementation; public vs serv
 
 | Variable                     | Purpose                                                                                       |
 | ---------------------------- | --------------------------------------------------------------------------------------------- |
-| `HYGRAPH_CONTENT_API_URL`    | GraphQL Content API endpoint used by the app, seed scripts, and Management SDK `endpoint`     |
+| `HYGRAPH_CONTENT_API_URL`    | High Performance Content API (`/content/…`). Used by the app and seed scripts. Not the Management `/graphql` URL. |
 | `HYGRAPH_READ_TOKEN`         | Published-stage reads for the public site                                                     |
 | `HYGRAPH_PREVIEW_TOKEN`      | Reserved. Not read. Draft preview is skipped. Never use on public requests.                   |
 | `HYGRAPH_MANAGEMENT_API_URL` | Script-only. Regional Management API GraphQL URL for Schema as Code and SDK `managementEndpoint`. Not read by the Next.js app. |

@@ -2,6 +2,7 @@ import { isRecord, isString, readUnknownArray } from "@/lib/guards";
 import {
   contentRevalidateSeconds,
   graphqlTimeoutMs,
+  logHygraphFrontendEnv,
   readHygraphContentApiUrl,
   readHygraphReadToken,
 } from "@/lib/env";
@@ -40,8 +41,17 @@ export async function contentGraphql(
     readonly timeoutMs?: number;
   },
 ): Promise<Record<string, unknown>> {
-  const url = readHygraphContentApiUrl();
-  const token = readHygraphReadToken();
+  logHygraphFrontendEnv();
+  let url: string;
+  let token: string;
+  try {
+    url = readHygraphContentApiUrl();
+    token = readHygraphReadToken();
+  } catch (error: unknown) {
+    const message =
+      error instanceof Error ? error.message : "Hygraph env is invalid";
+    throw new HygraphQueryError(message);
+  }
   const timeoutMs = options.timeoutMs ?? graphqlTimeoutMs();
   const revalidateSeconds =
     options.revalidateSeconds ?? contentRevalidateSeconds();
@@ -62,6 +72,16 @@ export async function contentGraphql(
       tags: [...options.tags],
     },
     signal: AbortSignal.timeout(timeoutMs),
+  }).catch((error: unknown) => {
+    const cause =
+      error instanceof Error && error.cause instanceof Error
+        ? error.cause.message
+        : undefined;
+    const hint =
+      cause === "unknown scheme"
+        ? " HYGRAPH_CONTENT_API_URL must start with https:// and must not include quotes. The Vercel dashboard does not strip quotes the way .env.local does."
+        : "";
+    throw new HygraphQueryError(`Content API fetch failed.${hint}`);
   });
 
   const body: unknown = await response.json();
