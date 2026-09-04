@@ -49,7 +49,7 @@ Not required for this demo. Each item uses a Hygraph capability that the MVP onl
 
 ## Prerequisites
 
-- Node.js 20.9 or newer. `.nvmrc` pins 22.20.0 (Homebrew `pnpm` 11 needs Node 22.13+)
+- Node.js 22 (`package.json` `engines.node` is `22.x`). `.nvmrc` pins 22.20.0 (Homebrew `pnpm` 11 needs Node 22.13+)
 - `pnpm` 11
 - A Hygraph project on Growth or higher, or a 30-day trial, so Remote Sources are available
 - A Google Cloud project for the visitor map (Maps JavaScript API only)
