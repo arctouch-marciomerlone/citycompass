@@ -1,0 +1,9 @@
+{
+  "operation": "publish",
+  "data": {
+    "__typename": "Place",
+    "id": "example-id",
+    "stage": "PUBLISHED",
+    "slug": "floripa-mercado-publico"
+  }
+}
