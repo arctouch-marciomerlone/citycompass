@@ -1,0 +1,13 @@
+pnpm-lock.yaml
+.next
+out
+build
+coverage
+node_modules
+playwright-report
+test-results
+blob-report
+AGENTS.md
+PLAN.md
+PRD.md
+talk.md
