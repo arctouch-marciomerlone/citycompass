@@ -18,7 +18,7 @@ import type {
 } from "@/lib/hygraph/types";
 import type { UiMessages } from "@/lib/i18n/messages";
 import type { Locale } from "@/lib/locale";
-import { mapPath } from "@/lib/routes";
+import { mapPath, editorialPlacesHref, isAppRoute } from "@/lib/routes";
 import type { WeatherViewModel } from "@/lib/weather/types";
 
 function FeaturedPlaces({
@@ -165,9 +165,14 @@ function SectionView({
         ) : null}
         {section.callToActionLabel !== undefined &&
         section.callToActionUrl !== undefined ? (
-          <a href={section.callToActionUrl} className="inline-block underline">
+          <EditorialHref
+            href={section.callToActionUrl}
+            locale={locale}
+            citySlug={city.slug}
+            className="inline-block underline"
+          >
             {section.callToActionLabel}
-          </a>
+          </EditorialHref>
         ) : null}
       </section>
     );
@@ -249,10 +254,43 @@ function SectionView({
         <RichTextHtml html={section.bodyHtml} />
       ) : null}
       {section.label !== undefined && section.url !== undefined ? (
-        <a href={section.url} className="mt-2 inline-block underline">
+        <EditorialHref
+          href={section.url}
+          locale={locale}
+          citySlug={city.slug}
+          className="mt-2 inline-block underline"
+        >
           {section.label}
-        </a>
+        </EditorialHref>
       ) : null}
     </section>
+  );
+}
+
+function EditorialHref({
+  href,
+  locale,
+  citySlug,
+  className,
+  children,
+}: {
+  readonly href: string;
+  readonly locale: Locale;
+  readonly citySlug: string;
+  readonly className: string;
+  readonly children: string;
+}) {
+  const nextHref = editorialPlacesHref(href, locale, citySlug);
+  if (isAppRoute(nextHref)) {
+    return (
+      <Link href={nextHref} className={className}>
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <a href={nextHref} className={className}>
+      {children}
+    </a>
   );
 }

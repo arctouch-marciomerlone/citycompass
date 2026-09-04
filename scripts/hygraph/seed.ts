@@ -17,8 +17,19 @@ import {
   type SeedFixtures,
 } from "./seed-types.ts";
 
-const PLACES_URL = "http://localhost:3000/en_US/places";
 const FEATURED_LAYOUT_GRID = "GRID";
+
+function publicOrigin(): string {
+  const value = process.env.NEXT_PUBLIC_SITE_URL;
+  if (typeof value === "string" && value.trim() !== "") {
+    return value.trim().replace(/\/$/, "");
+  }
+  return "http://localhost:3000";
+}
+
+function cityPlacesUrl(citySlug: string, locale: string): string {
+  return `${publicOrigin()}/${locale}/${citySlug}/places`;
+}
 
 interface RichTextAst {
   readonly children: readonly {
@@ -282,7 +293,7 @@ function pageSectionBlocks(
       heading: sections.hero.heading.en_US,
       body: paragraph(sections.hero.body.en_US),
       callToActionLabel: sections.hero.callToActionLabel.en_US,
-      callToActionUrl: PLACES_URL,
+      callToActionUrl: cityPlacesUrl(city.slug, LocaleApiId.EnUs),
       localizations: blockLocalizations(
         sections.hero.heading,
         (heading, locale) => ({
@@ -338,7 +349,7 @@ function pageSectionBlocks(
       heading: sections.cta.heading.en_US,
       body: paragraph(sections.cta.body.en_US),
       label: sections.cta.label.en_US,
-      url: PLACES_URL,
+      url: cityPlacesUrl(city.slug, LocaleApiId.EnUs),
       localizations: blockLocalizations(
         sections.cta.heading,
         (_heading, locale) => ({

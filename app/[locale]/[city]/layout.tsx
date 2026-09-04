@@ -23,19 +23,21 @@ export async function generateMetadata({
   if (!isLocale(localeParam)) {
     return { title: "CityCompass" };
   }
+  let city;
   try {
-    const city = await getCity({ slug: citySlug, locale: localeParam });
-    return {
-      title: city?.seo?.title ?? city?.name ?? "CityCompass",
-      description: city?.seo?.description ?? "Localized city guide",
-      robots:
-        city?.seo?.noIndex === true
-          ? { index: false, follow: false }
-          : undefined,
-    };
+    city = await getCity({ slug: citySlug, locale: localeParam });
   } catch {
     return { title: "CityCompass" };
   }
+  if (city === undefined) {
+    notFound();
+  }
+  return {
+    title: city.seo?.title ?? city.name,
+    description: city.seo?.description ?? "Localized city guide",
+    robots:
+      city.seo?.noIndex === true ? { index: false, follow: false } : undefined,
+  };
 }
 
 export default async function CityLayout({
