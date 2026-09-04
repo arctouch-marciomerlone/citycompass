@@ -49,7 +49,7 @@ Not required for this demo. Each item uses a Hygraph capability that the MVP onl
 
 ## Prerequisites
 
-- Node.js 22 (`package.json` `engines.node` is `22.x`). `.nvmrc` pins 22.20.0 (Homebrew `pnpm` 11 needs Node 22.13+)
+- Node.js 24 (`package.json` `engines.node` is `24.x`). `.nvmrc` pins 24.20.0
 - `pnpm` 11
 - A Hygraph project on Growth or higher, or a 30-day trial, so Remote Sources are available
 - A Google Cloud project for the visitor map (Maps JavaScript API only)
@@ -167,5 +167,5 @@ Copy from `.env.example`. Names may change during implementation; public vs serv
 | `pnpm format`                        | Prettier write                                                                                             |
 | `pnpm format:check`                  | Prettier check                                                                                             |
 | `pnpm hygraph:backup`                | Export live schema JSON to `hygraph/backups/` (gitignored). Content export is skipped.                     |
-| `pnpm hygraph:reset`                 | Backup, fail closed if the project is not clean, apply `hygraph/schema/`. Requires Node 22.20 (`nvm use`). |
+| `pnpm hygraph:reset`                 | Backup, fail closed if the project is not clean, apply `hygraph/schema/`. Requires Node 24 (`nvm use`). |
 | `pnpm hygraph:update-weather-remote` | Backup, then patch `City.weather` Path and input args on a live schema.                                    |

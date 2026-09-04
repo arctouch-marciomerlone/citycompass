@@ -27,13 +27,12 @@ export function assertNodeVersion(): void {
   const version = process.versions.node;
   const parts = version.split(".");
   const major = Number(parts[0]);
-  const minor = Number(parts[1]);
-  if (!Number.isFinite(major) || !Number.isFinite(minor)) {
+  if (!Number.isFinite(major)) {
     throw new Error(`Could not parse Node version ${version}`);
   }
-  if (major < 22 || (major === 22 && minor < 6)) {
+  if (major !== 24) {
     throw new Error(
-      `hygraph scripts require Node 22.6+ (nvm use from .nvmrc). Current: ${version}`,
+      `hygraph scripts require Node 24 (nvm use from .nvmrc). Current: ${version}`,
     );
   }
 }

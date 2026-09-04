@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-- Node 22.20.0 (`.nvmrc`). Homebrew `pnpm` 11 needs Node 22.13+.
+- Node 24.20.0 (`.nvmrc`).
 - `.env.local` with `HYGRAPH_CONTENT_API_URL`, `HYGRAPH_MANAGEMENT_API_URL`, `HYGRAPH_MANAGEMENT_TOKEN`.
 - Growth or a 30-day trial (three locales + one REST Remote Source).
 - Approved `@hygraph/management-sdk` (installed).
