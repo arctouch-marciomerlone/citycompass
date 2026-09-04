@@ -20,7 +20,7 @@ import {
 const FEATURED_LAYOUT_GRID = "GRID";
 
 function publicOrigin(): string {
-  const value = process.env.NEXT_PUBLIC_SITE_URL;
+  const value = process.env["NEXT_PUBLIC_SITE_URL"];
   if (typeof value === "string" && value.trim() !== "") {
     return value.trim().replace(/\/$/, "");
   }
